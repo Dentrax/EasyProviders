@@ -20,7 +20,9 @@ using EasyProviders.Services.Localization;
 using EasyProviders.Services.Notification;
 
 namespace EasyProviders.Example {
+
     public sealed class Program {
+
         static void Main(string[] args) {
 
             Console.Title = "EasyProviders";
