@@ -2,6 +2,8 @@
 
 **Provider initializer clean-template-library for Softwares**
 
+* IMPORTANT! : This library was created from cropped source-code template from original source. Some code sections are left to be an example. :)
+
 [What It Is](#what-it-is)
 
 [How To Use](#how-to-use)
@@ -25,7 +27,7 @@
 
 EasyProviders is an advanced provider/service control singleton-instanced library.
 
-* Uses : .NET CORE 1.1 Class Library
+** Uses : .NET CORE 1.1 Class Library **
 
 Controls and wizards are available for users to:
 
