@@ -8,6 +8,9 @@
 #endregion
 
 namespace EasyProviders.Services {
-    public interface IServicePlugin : IPlugin { }
-
+    public interface IProvider {
+        bool IsStarted { get; }
+        void Start();
+        void Stop();
+    }
 }

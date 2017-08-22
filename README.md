@@ -23,26 +23,24 @@
 
 **EasyProviders**
 
-Will be update soon...
+EasyProviders is an advanced provider/service control singleton-instanced library.
 
-**Maxiploit Supporting Games**
-
-Maxiploit for Online Game Server Files is an advanced debugging / exploit testing tool.
+* Uses : .NET CORE 1.1 Class Library
 
 Controls and wizards are available for users to:
 
-* Detect and block exploit packets
-* More stable, more reliable server experience
-* And much more, Will be update soon...
+* Create as easy as possible custom provider service
+* Control all providers/services with a single line of code.
+* Boot/Shutdown your providers, analyze with StopWatch easily.
+* Provide to great, compact, collective, regular manager-accessing in large projects & games etc...
 
-**Maxiploit Supporting Games**
-
--Will be update soon...
 
 ## How To Use
 
 Example Usage
 =============
+
+![Preview Thumbnail](https://raw.githubusercontent.com/Dentrax/EasyProviders/master/EasyProviders/Thumbnail.png)
 
 
 
@@ -108,13 +106,13 @@ Set Optional Functions
 	SDK.SetDebugMode(false);
 ```
 
-Initialize Providers (Call void Initialize() from all provides)
+Initializing Providers (Call void Initialize() from all provides)
 --------------------------
 ```
 	SDK.Initialize(initDic);
 ```
 
-Boot Providers (Call void Start() from all provides)
+Booting Providers (Call void Start() from all provides)
 --------------------------
 ```
 	SDK.Boot(delegate {
@@ -122,15 +120,23 @@ Boot Providers (Call void Start() from all provides)
 	});
 ```
 
+Shutting-down Providers (Call void Stop() from all provides)
+--------------------------
+```
+	SDK.Shutdown(delegate {
+		//OnSuccess
+	});
+```
+
 ## About
 
-Maxiploit was created to serve three purposes:
+EasyProviders was created to serve three purposes:
 
-**Maxiploit is a server-client debugging tool which logs all TCP-UDP traffic including incorrect and fraudulent packet detection system between your server and the client.**
+**EasyProviders is a advanced providers/services/managers/singleton controller**
 
-1. To act as a software to test online game server files.
+1. To act as a library to control providers/services/managers.
 
-2. To provide a strong security, protection and privacy software for any online game project that requires a server-client architecture. 
+2. To provide a strong debugging, life-saver and advanced library for any bigger software & game project that requires a singleton/manager system architecture. 
 
 3. Instead of writing long and complex code every time, it provides the easiest and strongest way.
 
@@ -140,15 +146,15 @@ Maxiploit was created to serve three purposes:
 
 ## Branches
 
-We publish source for the **[Maxiploit]** in three rolling branches:
+We publish source for the **[EasyProviders]** in three rolling branches:
 
 We publish source for the engine in three rolling branches:
 
-The **[release branch](https://github.com/dentrax/EasyProviders/tree/release)** is extensively tested by our QA team and makes a great starting point for learning the Maxiploit.
+The **[release branch](https://github.com/dentrax/EasyProviders/tree/release)** is extensively tested by our QA team and makes a great starting point for learning the EasyProviders.
 
 The **[promoted branch](https://github.com/dentrax/EasyProviders/tree/promoted)** is updated with builds for our team members to use. It's a good balance between getting the latest cool stuff and knowing most things work.
 
-The **[master branch](https://github.com/dentrax/EasyProviders/tree/master)** tracks [live changes](https://github.com/dentrax/Maxiploit/commits/master) by our Maxiploit team. 
+The **[master branch](https://github.com/dentrax/EasyProviders/tree/master)** tracks [live changes](https://github.com/dentrax/EasyProviders/commits/master) by our EasyProviders team. 
 This is the cutting edge and may be buggy - it may not even compile.
 
 Other short-lived branches may pop-up from time to time as we stabilize new releases or hotfixes.
