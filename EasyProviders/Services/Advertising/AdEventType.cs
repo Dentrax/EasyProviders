@@ -1,0 +1,19 @@
+﻿namespace EasyProviders.Services.Advertising {
+    public enum AdEventType {
+        INTERSTITIAL_LOADED,
+        INTERSTITIAL_SHOWN,
+        INTERSTITIAL_DISMISSED,
+        INTERSTITIAL_FAILED,
+        INTERSTITIAL_EXPIRED,
+        BANNER_SHOWN,
+        BANNER_DISMISSED,
+        BANNER_FAILED,
+        REWARDED_LOADED,
+        REWARDED_SHOWN,
+        REWARDED_DISMISSED,
+        REWARDED_FAILED,
+        REWARDED_FAILED_TO_PLAY,
+        REWARDED_REWARD_RECEIVED,
+        REWARDED_EXPIRED
+    }
+}
