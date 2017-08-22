@@ -1,8 +1,7 @@
 ﻿using System;
 
-namespace EasyProviders
-{
-    public class Class1
-    {
+namespace EasyProviders {
+    public class Class1 {
+
     }
 }
