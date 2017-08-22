@@ -171,9 +171,9 @@ Please check the [CONTRIBUTING.md](CONTRIBUTING.md) file for contribution instru
 
 ## Contact
 
-EasySQLITE was created by Furkan 'Dentrax' Türkal
+EasyProviders was created by Furkan 'Dentrax' Türkal
 
  * <https://www.furkanturkal.com>
  
-You can contact Maxiploit by URL:
+You can contact EasyProviders by URL:
     **[CONTACT](https://github.com/dentrax)**
