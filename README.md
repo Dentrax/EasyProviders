@@ -2,7 +2,7 @@
 
 **Provider initializer clean-template-library for Softwares**
 
-**IMPORTANT! :**  This library was created from cropped source-code template from original source. Some code sections are left to be an example. :)
+This library was created from cropped source-code template from original source. Some code sections are left to be an example. :)
 
 [What It Is](#what-it-is)
 
