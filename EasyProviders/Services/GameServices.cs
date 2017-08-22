@@ -29,10 +29,13 @@ namespace EasyProviders.Services {
 
         public bool IsSafeModeEnabled { get; private set; }
 
+        public bool IsDebugModeEnabled { get; private set; }
+
         public GameServices() {
             this.WasInitialized = false;
             this.IsBooted = false;
             this.IsSafeModeEnabled = false;
+            this.IsDebugModeEnabled = false;
 
             this.m_services.Add(ProviderType.Accessibility, new AccessibilityProvider());
             this.m_services.Add(ProviderType.Achievement, new AchievementProvider());
@@ -131,6 +134,10 @@ namespace EasyProviders.Services {
 
         public void SetSafeMode(bool mode) {
             this.IsSafeModeEnabled = mode;
+        }
+
+        public void SetDebugMode(bool mode) {
+            this.IsDebugModeEnabled = mode;
         }
 
         public AccessibilityProvider Accessibility {

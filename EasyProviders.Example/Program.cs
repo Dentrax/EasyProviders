@@ -23,6 +23,8 @@ namespace EasyProviders.Example {
     public sealed class Program {
         static void Main(string[] args) {
 
+            Console.Title = "EasyProviders";
+
             GameServices SDK = new GameServices();
 
             Dictionary<ProviderType, ServiceProvider.InitializeContext> initDic = new Dictionary<ProviderType, ServiceProvider.InitializeContext>();
@@ -45,13 +47,19 @@ namespace EasyProviders.Example {
             initDic.Add(ProviderType.Store, new StoreProvider.InitializeContext());
 
             SDK.SetSafeMode(false);
+            SDK.SetDebugMode(false);
+
             SDK.Initialize(initDic);
             SDK.Boot(delegate {
                 Console.WriteLine("EasyProviders SDK booted successfully!");
                 Console.WriteLine("Safe mode enabled : " + SDK.IsSafeModeEnabled);
             });
 
+            Console.WriteLine();
+
             SDK.Globalization.Test();
+
+            Console.WriteLine();
 
             SDK.Shutdown(delegate {
                 Console.WriteLine("EasyProviders SDK shutdown!");
