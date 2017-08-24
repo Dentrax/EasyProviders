@@ -27,7 +27,7 @@ This library was created from cropped source-code template from original source.
 
 EasyProviders is an advanced provider/service control singleton-instanced library.
 
-**Uses : <kbd>`.NET CORE 1.1 Class Library`<kbd>**
+**Uses : `.NET CORE 1.1 Class Library`**
 
 Controls and wizards are available for users to:
 
@@ -192,3 +192,5 @@ EasyProviders was created by Furkan 'Dentrax' Türkal
  
 You can contact EasyProviders by URL:
     **[CONTACT](https://github.com/dentrax)**
+
+<kbd>Best Regards<kbd>
