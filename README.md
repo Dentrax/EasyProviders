@@ -27,7 +27,7 @@ This library was created from cropped source-code template from original source.
 
 EasyProviders is an advanced provider/service control singleton-instanced library.
 
-**Uses : `.NET CORE 1.1 Class Library`**
+**Uses : <kbd>`.NET CORE 1.1 Class Library`<kbd>**
 
 Controls and wizards are available for users to:
 
