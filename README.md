@@ -193,4 +193,4 @@ EasyProviders was created by Furkan 'Dentrax' Türkal
 You can contact EasyProviders by URL:
     **[CONTACT](https://github.com/dentrax)**
 
-<kbd>Best Regards<kbd>
+<kbd>Best Regards</kbd>
