@@ -24,7 +24,7 @@ namespace EasyProviders.Services {
             this.m_providers = new Dictionary<ProviderType, IServiceProvider>();
         }
 
-        public static bool Boot(Dictionary<ProviderType, IServiceProvider> providers, Action onDone = null) {
+        public static bool Boot(Dictionary<ProviderType, IServiceProvider> providers) {
             if (ProviderLocator<ProviderType>.Instance.IsBooted) {
                 throw new ProviderException("[FTProviderLocator::Boot()] -> Providers already booted!");
             }
@@ -36,15 +36,13 @@ namespace EasyProviders.Services {
                 ProviderLocator<ProviderType>.Instance.StartProviders();
                 ProviderLocator<ProviderType>.Instance.IsBooted = true;
 
-                if (onDone != null) onDone();
-
                 return true;
             } catch (Exception ex){
                 throw new ProviderException("[FTProviderLocator::Boot()] -> An exception was received while booting providers. Exception : " + ex.ToString());
             }
         }
 
-        public static bool Shutdown(Dictionary<ProviderType, IServiceProvider> providers, Action onDone = null) {
+        public static bool Shutdown(Dictionary<ProviderType, IServiceProvider> providers) {
             if (!ProviderLocator<ProviderType>.Instance.IsBooted) {
                 throw new ProviderException("[FTProviderLocator::Shutdown()] -> You should Boot Providers first!");
             }
@@ -52,8 +50,6 @@ namespace EasyProviders.Services {
             try {
                 ProviderLocator<ProviderType>.Instance.StopProviders();
                 ProviderLocator<ProviderType>.Instance.IsBooted = false;
-
-                if (onDone != null) onDone();
 
                 return true;
             } catch (Exception ex) {

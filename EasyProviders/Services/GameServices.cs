@@ -89,7 +89,7 @@ namespace EasyProviders.Services {
             this.WasInitialized = true;
         }
 
-        public void Boot(Action onDone = null) {
+        public void Boot(Action<bool> callBack = null) {
             if (!this.WasInitialized) {
                 throw new Exception("[GameServices::Boot()] -> You should initialize first!");
             }
@@ -98,25 +98,27 @@ namespace EasyProviders.Services {
                 throw new Exception("[GameServices::Boot()] -> GameServices already booted!");
             }
 
-            ProviderLocator<ProviderType>.Boot(m_services, delegate {
-                this.IsBooted = true;
-                if (onDone != null) onDone();
-            });
+            bool success = ProviderLocator<ProviderType>.Boot(m_services);
+
+            this.IsBooted = success;
+
+            if (callBack != null) callBack(success);
         }
 
-        public void Shutdown(Action onDone = null) {
+        public void Shutdown(Action<bool> callBack = null) {
             if (!this.WasInitialized) {
                 throw new Exception("[GameServices::Boot()] -> You should initialize first!");
             }
 
-            if (!this.IsBooted) {
-                throw new Exception("[GameServices::Boot()] -> You should boot GameServices first!");
+            if (this.IsBooted) {
+                throw new Exception("[GameServices::Boot()] -> GameServices already booted!");
             }
 
-            ProviderLocator<ProviderType>.Shutdown(m_services, delegate {
-                this.IsBooted = false;
-                if (onDone != null) onDone();
-            });
+            bool success = ProviderLocator<ProviderType>.Shutdown(m_services);
+
+            this.IsBooted = !success;
+
+            if (callBack != null) callBack(success);
         }
 
         public bool IsAllServicesStarted() {
