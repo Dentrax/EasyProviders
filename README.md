@@ -117,16 +117,24 @@ Initializing Providers (Call void Initialize() from all provides)
 Booting Providers (Call void Start() from all provides)
 --------------------------
 ```
-	SDK.Boot(delegate {
-		//OnSuccess
+	SDK.Boot(delegate (bool success){
+		if (success) {
+            //OnSuccess
+        } else {
+            //OnFailed
+        }
 	});
 ```
 
 Shutting-down Providers (Call void Stop() from all provides)
 --------------------------
 ```
-	SDK.Shutdown(delegate {
-		//OnSuccess
+	SDK.Shutdown(delegate (bool success) {
+		if (success) {
+            //OnSuccess
+        } else {
+            //OnFailed
+        }
 	});
 ```
 
