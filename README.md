@@ -27,7 +27,7 @@ This library was created from cropped source-code template from original source.
 
 EasyProviders is an advanced provider/service control singleton-instanced library.
 
-**Uses : .NET CORE 1.1 Class Library**
+**Uses : `.NET CORE 1.1 Class Library`**
 
 Controls and wizards are available for users to:
 
@@ -48,7 +48,7 @@ Example Usage
 
 Using Namespace
 --------------------------
-```
+```csharp
 	using EasyProviders.Services;
 	using EasyProviders.Services.Accessibility;
 	using EasyProviders.Services.Advertising;
@@ -70,19 +70,19 @@ Using Namespace
 
 Create GameServices Constructor
 --------------------------
-```
+```csharp
 	GameServices SDK = new GameServices();
 ```
 
 Create GameServices Initializer Dictionary
 --------------------------
-```
+```csharp
 	Dictionary<ProviderType, ServiceProvider.InitializeContext> initDic = new Dictionary<ProviderType, ServiceProvider.InitializeContext>();
 ```
 
 Insert Providers to GameServices Dictionary
 --------------------------
-```
+```csharp
 	initDic.Add(ProviderType.Accessibility, new AccessibilityProvider.InitializeContext());
 	initDic.Add(ProviderType.Achievement, new AchievementProvider.InitializeContext());
 	initDic.Add(ProviderType.Advertising, new AdvertisingProvider.InitializeContext());
@@ -103,20 +103,20 @@ Insert Providers to GameServices Dictionary
 
 Set Optional Functions
 --------------------------
-```
+```csharp
 	SDK.SetSafeMode(false);
 	SDK.SetDebugMode(false);
 ```
 
 Initializing Providers (Call void Initialize() from all provides)
 --------------------------
-```
+```csharp
 	SDK.Initialize(initDic);
 ```
 
 Booting Providers (Call void Start() from all provides)
 --------------------------
-```
+```csharp
 	SDK.Boot(delegate (bool success) {
 		if (success) {
 			//OnSuccess
@@ -128,7 +128,7 @@ Booting Providers (Call void Start() from all provides)
 
 Shutting-down Providers (Call void Stop() from all provides)
 --------------------------
-```
+```csharp
 	SDK.Shutdown(delegate (bool success) {
 		if (success) {
 			 //OnSuccess
