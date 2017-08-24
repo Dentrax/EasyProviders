@@ -61,9 +61,17 @@ namespace EasyProviders.Example {
             SDK.SetDebugMode(false);
 
             SDK.Initialize(initDic);
-            SDK.Boot(delegate {
-                Console.WriteLine("EasyProviders SDK booted successfully!");
+
+            SDK.Boot(delegate (bool success) {
+
+                if (success) {
+                    Console.WriteLine("EasyProviders SDK booted successfully!");
+                } else {
+                    Console.WriteLine("EasyProviders get an error while booting SDK!");
+                }
+
                 Console.WriteLine("Safe mode enabled : " + SDK.IsSafeModeEnabled);
+
             });
 
             Console.WriteLine();
@@ -72,8 +80,14 @@ namespace EasyProviders.Example {
 
             Console.WriteLine();
 
-            SDK.Shutdown(delegate {
-                Console.WriteLine("EasyProviders SDK shutdown!");
+            SDK.Shutdown(delegate (bool success) {
+
+                if (success) {
+                    Console.WriteLine("EasyProviders SDK shutdown success!");
+                } else {
+                    Console.WriteLine("EasyProviders get an error while while shutting-down SDK!");
+                }
+                
             });
 
             Console.ReadLine();
