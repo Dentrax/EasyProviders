@@ -108,10 +108,10 @@ Set Optional Functions
 	SDK.SetDebugMode(false);
 ```
 
-| Variables     | Type             |
-| ------------- |:----------------:|
-| IsDebugMode   | public (readonly)|
-| IsSafeMode    | public (readonly)|
+| Variable       | Type                 |
+| --------------- |:--------------------:|
+| `IsDebugMode`   | public **(readonly)**|
+| `IsSafeMode`    | public **(readonly)**|
 
 Initializing Providers (Call void Initialize() from all provides)
 --------------------------
