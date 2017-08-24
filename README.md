@@ -31,10 +31,10 @@ EasyProviders is an advanced provider/service control singleton-instanced librar
 
 Controls and wizards are available for users to:
 
-* Create as easy as possible custom provider service
-* Control all providers/services with a single line of code.
-* Boot/Shutdown your providers, analyze with StopWatch easily.
-* Provide to great, compact, collective, regular manager-accessing in large projects & games etc...
+> * Create as easy as possible custom provider service
+> * Control all providers/services with a single line of code.
+> * Boot/Shutdown your providers, analyze with StopWatch easily.
+> * Provide to great, compact, collective, regular manager-accessing in large projects & games etc...
 
 
 ## How To Use
@@ -165,11 +165,11 @@ We publish source for the **[EasyProviders]** in three rolling branches:
 
 We publish source for the engine in three rolling branches:
 
-The **[release branch](https://github.com/dentrax/EasyProviders/tree/release)** is extensively tested by our QA team and makes a great starting point for learning the EasyProviders.
+> The **[release branch](https://github.com/dentrax/EasyProviders/tree/release)** is extensively tested by our QA team and makes a great starting point for learning the EasyProviders.
 
-The **[promoted branch](https://github.com/dentrax/EasyProviders/tree/promoted)** is updated with builds for our team members to use. It's a good balance between getting the latest cool stuff and knowing most things work.
+> The **[promoted branch](https://github.com/dentrax/EasyProviders/tree/promoted)** is updated with builds for our team members to use. It's a good balance between getting the latest cool stuff and knowing most things work.
 
-The **[master branch](https://github.com/dentrax/EasyProviders/tree/master)** tracks [live changes](https://github.com/dentrax/EasyProviders/commits/master) by our EasyProviders team. 
+> The **[master branch](https://github.com/dentrax/EasyProviders/tree/master)** tracks [live changes](https://github.com/dentrax/EasyProviders/commits/master) by our EasyProviders team. 
 This is the cutting edge and may be buggy - it may not even compile.
 
 Other short-lived branches may pop-up from time to time as we stabilize new releases or hotfixes.
